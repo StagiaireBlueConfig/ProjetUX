@@ -20,6 +20,20 @@ class PublicController extends AbstractController
             'controller_name' => 'PublicController',
         ]);
     }
+    #[Route('admin/', name: 'admintest')]
+    public function admin(): Response
+    {
+        return $this->render('public/index.html.twig', [
+            'controller_name' => 'PublicController',
+        ]);
+    }
+    #[Route('profile/', name: 'profiletest')]
+    public function test(): Response
+    {
+        return $this->render('public/index.html.twig', [
+            'controller_name' => 'PublicController',
+        ]);
+    }
     #[Route('/contact', name: 'contact')]
     public function contact(Request $request, MailerInterface $mailer): Response
     {
